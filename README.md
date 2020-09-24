@@ -39,7 +39,7 @@ Target Audience Usage:
 
 Feature 1: Play classic world game inspired by the TV show. 
 
-- Each round of game contains a category and blank word puzzle with each blank representing a letter in the answer. The user spins the wheel and guesses a letter until they can solve the word puzzle and winning prizes along the way. 
+- Each round of game contains a category and blank word puzzle with each blank representing a letter in the answer. The user spins the wheel and guess a letter until they can solve the word puzzle and winning prizes along the way. 
 
 Feature 2: Timer and Scoreboard 
 

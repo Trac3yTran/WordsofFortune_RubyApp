@@ -2,7 +2,7 @@
 # Software Development Plan - Words of Fortune 
 
  ## Table of Contents:  
-- [Link](#Links)  
+- [Links](#Links)  
 - [Development, Purpose & Scope](#Development-purpose-scope)  
 - [Functionality and Features](#Functionality-and-Features)  
 - [User Interaction and Experience](#User-interaction-and-experience)  
@@ -22,10 +22,9 @@
 
 ## Development, Purpose & Scope
 
-Description: 
+Purpose: 
 
-Words of Fortune inspired by the Wheel of Fortune TV show is a fun game for everyone. Players spin the wheel, solve puzzles and train your brain as you go. Compete in word puzzle tournaments against other players and get prizes determined by spinning a giant wheel. Each round has a category and blank word puzzle with each blank representing a letter in the answer. Player needs to spin the win to start to determine dollar value and have five seconds to guess a consonant. Pick a correct letter that will earn a dollar value with right reveal multiplied by the number of times that the letter appears in the puzzle. If the player gets the letter right, it can spin the wheel again and continue the process. Fail to pick the correct letter that is not in the world puzzle or letter that has been called before it will move to the next player until the world puzzle is solved. 
-
+Words of Fortune is a fun educational word-guessing game to be played in a command-line interface. The purpose of Words of Fortune is to provide a fun way of learning vocabulary and testing your general knowledge. Player spin the wheel, solve puzzles and train your brain as you go. Compete in word puzzle tournaments get dollar value determined by spinning a giant wheel. Each round has a category and blank word puzzle with each blank representing a letter in the answer. Player needs to spin the win to start to determine dollar value and have five seconds to guess a consonant. Pick a correct letter that will earn a dollar value with right reveal multiplied by the number of times that the letter appears in the puzzle. If the player gets the letter right, it can spin the wheel again and continue the process. Fail to pick the correct letter that is not in the world puzzle or letter that has been called before it will move to the next player until the world puzzle is solved. 
 
 Problem: 
 
@@ -33,12 +32,11 @@ The current problem is more than 20 per cent of Australian adults have very low 
 
 Target Audience:
 
-Words of Fortune is a great family game for everyone. It was created for entertainment purpose, but it can be beneficial, especially in educational space, to boost children learning.  For e.g. It helps the child to practise spelling rules they have learnt at school. The importance to spell the words correctly to be able to complete the task in a given time. Playing Words of Fortune provides an excellent opportunity to have some bonding time with your child if you are helping a five-year-old solving a world puzzle as a family. You can model the love of language, and this can be passed down to the children. 
-
-
+Words of Fortune is an excellent game for everyone. Created for entertainment purpose, but it can be beneficial, especially in educational space, to boost vocabulary. The importance to spell the words correctly to be able to complete the task in a given time. This is done by allowing the user to guess the secret one letter at a time, which can also help remember the spelling of new words.
 Target Audience Usage:
 
 Words of Fortune will be launched from the command line using the files listed in the installation section of this Readme.md document. 
+
 #
 
 ## Functionality and Features
@@ -53,7 +51,7 @@ Timer and Scoreboard
 
 Spin the wheel and win prizes.
 
- -  Player spins the wheel to determine the dollar value and guess a consonant/letter. Calling the correct letters will earn the amount, and the right reveal, multiplied by the number of times that the letter appears in the puzzle. They can also buy a vowel for $250 to attempt to solve the puzzle and can continue to buy the vowel if they have the money to do so. Prizes range from $50 - $5000 and others that need to be avoided like Lose a Turn and bankrupt, which automatically go to the next user.
+ -  Player spins the wheel to determine the dollar value and guess a consonant/letter. Calling the correct letters will earn the amount, and the right reveal, multiplied by the number of times that the letter appears in the puzzle. They can also buy a vowel for $250 to attempt to solve the puzzle and can continue to buy the vowel if they have the money to do so. Prizes range from $500 - $2500 and others that need to be avoided like Lose a Turn and bankrupt, which automatically go to the next user.
 
 
 #

@@ -11,43 +11,77 @@
 # User guess a letter
 #   - If correctly guess letter appear. 
 #   - Add the letter to the value from the wheel
-# Incorrect guess with go to the computer  
 # Display scoreboard
 # Keep guessing until the puzzle is solve
 
 
-# Classes
-#  - Spinwheel 
-#  - timer
-#  - scoreboard
-
+require 'colorize'
 
 # Initalise title page
 
-def title
-end 
+    def welcome
+        puts ""
+        puts ""
+        puts ""
+        puts ""
+        puts "                         Welcome to                       "
+        puts ""
+
+        puts "░██╗░░░░░░░██╗░█████╗░██████╗░██████╗░░██████╗  ░█████╗░███████╗".green
+        puts "░██║░░██╗░░██║██╔══██╗██╔══██╗██╔══██╗██╔════╝  ██╔══██╗██╔════╝".red
+        puts "░╚██╗████╗██╔╝██║░░██║██████╔╝██║░░██║╚█████╗░  ██║░░██║█████╗░░".yellow
+        puts "░░████╔═████║░██║░░██║██╔══██╗██║░░██║░╚═══██╗  ██║░░██║██╔══╝░░".cyan
+        puts "░░╚██╔╝░╚██╔╝░╚█████╔╝██║░░██║██████╔╝██████╔╝  ╚█████╔╝██║░░░░░".blue
+        puts "░░░╚═╝░░░╚═╝░░░╚════╝░╚═╝░░╚═╝╚═════╝░╚═════╝░  ░╚════╝░╚═╝░░░░░".white
 
 
-puts "                         Welcome to ...                        "
+        puts "███████╗░█████╗░██████╗░████████╗██╗░░░██╗███╗░░██╗███████╗".green
+        puts "██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██║░░░██║████╗░██║██╔════╝".red
+        puts "█████╗░░██║░░██║██████╔╝░░░██║░░░██║░░░██║██╔██╗██║█████╗░░".yellow
+        puts "██╔══╝░░██║░░██║██╔══██╗░░░██║░░░██║░░░██║██║╚████║██╔══╝░░".cyan
+        puts "██║░░░░░╚█████╔╝██║░░██║░░░██║░░░╚██████╔╝██║░╚███║███████╗".blue
+        puts "╚═╝░░░░░░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░░╚═════╝░╚═╝░░╚══╝╚══════╝".white
+        puts ""
+        puts "                      by Tracey Tran                      "
+        puts ""
+        puts ""
+        puts ""
+        puts ""
+    end
 
-puts "░██╗░░░░░░░██╗░█████╗░██████╗░██████╗░░██████╗  ░█████╗░███████╗"
-puts "░██║░░██╗░░██║██╔══██╗██╔══██╗██╔══██╗██╔════╝  ██╔══██╗██╔════╝"
-puts "░╚██╗████╗██╔╝██║░░██║██████╔╝██║░░██║╚█████╗░  ██║░░██║█████╗░░"
-puts "░░████╔═████║░██║░░██║██╔══██╗██║░░██║░╚═══██╗  ██║░░██║██╔══╝░░"
-puts "░░╚██╔╝░╚██╔╝░╚█████╔╝██║░░██║██████╔╝██████╔╝  ╚█████╔╝██║░░░░░"
-puts "░░░╚═╝░░░╚═╝░░░╚════╝░╚═╝░░╚═╝╚═════╝░╚═════╝░  ░╚════╝░╚═╝░░░░░"
+    welcome
+ 
 
+    # Determine whether response is 'like yes'(=>true) or 'like no'(=>false) or neither(=>try again)
 
-puts "███████╗░█████╗░██████╗░████████╗██╗░░░██╗███╗░░██╗███████╗"
-puts "██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██║░░░██║████╗░██║██╔════╝"
-puts "█████╗░░██║░░██║██████╔╝░░░██║░░░██║░░░██║██╔██╗██║█████╗░░"
-puts "██╔══╝░░██║░░██║██╔══██╗░░░██║░░░██║░░░██║██║╚████║██╔══╝░░"
-puts "██║░░░░░╚█████╔╝██║░░██║░░░██║░░░╚██████╔╝██║░╚███║███████╗"
-puts "╚═╝░░░░░░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░░╚═════╝░╚═╝░░╚══╝╚══════╝"
+    puts "\nReady to play? (Y/N)".colorize(:green)
 
+  
+      def ready_to_play
+        case yes? response
+          when "y", "Y", "yes", "Yes", "YES"
+            return true
+          when "n", "N", "no", "No", "NO"
+            return false
+          else
+            puts "Please enter yes or no:".colorize(:light_red)
+            yes?(gets.chomp)
+        end
+      end
+      
 
-#  add a spinning wheel here
+    def ready_to_play
+        if not yes?(gets.chomp)
+        puts "Okay. See you next time!".colorize(:green)
+        exit
+      end
+    end 
 
-# ////////////////////////////////////////////////////////////
+    # ////// games rules /////
 
+    # def how_to_play
+    #     puts "Spin the win and naming the letters to guess the word puzzle"
+    #     puts "inc"
+    # end
 
+    

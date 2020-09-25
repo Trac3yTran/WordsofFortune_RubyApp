@@ -1,5 +1,5 @@
 
-# Project: Words of Fortune - Tracey Tran 
+# Wheel of  
 
  ## Table of Contents:  
 - [Links](#Links)  
@@ -74,18 +74,12 @@ Feature 3: Spin the wheel and win prizes.
 
 ## Implementation plan
 
--   Feature 1:  Implementation
+I created a Trello board once my idea has been approved to assist with breaking down the three main components from the assignment requirements:  documentation, coding and presentation. My Trello board consist of the schedule for the next 11 days of tasks that I have allocated in different areas to help manage workload in bit size. After the initial planning was completed on Trello, I had a clear picture of what my application looks like and primarily made possible by using the Trello and the flow chart above. By allocating each task into my schedule and marking it did allow me to focus on the main goal and keep me on track of completing this before the deadline. 
 
-Task Checklist:
+### [Trello Board](https://trello.com/b/HXjd9mhc/wordsoffortuneterminal-app)
 
--   Feature 2:  Implementation
 
-Task Checklist:
-
--   Feature 3:  Implementation
-
-Task Checklist
-
+![Trello](Trello.png)
 
 #
 

@@ -52,31 +52,25 @@ require 'colorize'
     welcome
  
 
-    # Determine whether response is 'like yes'(=>true) or 'like no'(=>false) or neither(=>try again)
-
-    puts "\nReady to play? (Y/N)".colorize(:green)
-
-  
-      def ready_to_play
-        case yes? response
-          when "y", "Y", "yes", "Yes", "YES"
-            return true
-          when "n", "N", "no", "No", "NO"
-            return false
-          else
-            puts "Please enter yes or no:".colorize(:light_red)
-            yes?(gets.chomp)
-        end
-      end
-      
-
+   
     def ready_to_play
-        if not yes?(gets.chomp)
-        puts "Okay. See you next time!".colorize(:green)
-        exit
-      end
-    end 
+      puts "Ready to play? (Y/N)".colorize(:green)
+      play = gets.chomp.to_s  
+        if play == 'y' || play == 'Y' || play == 'yes'
+          puts ""
+          puts "please proceed!"
+          # add method how to play
+        elsif play == 'n' || play == 'N' || play == 'no'
+          puts ""
+          puts "Okay, see you next time"
+        else
+          puts "Please enter y or n:"
+          ready_to_play
+        end
+    end   
 
+    ready_to_play
+  
     # ////// games rules /////
 
     # def how_to_play

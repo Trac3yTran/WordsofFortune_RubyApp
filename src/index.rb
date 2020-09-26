@@ -49,58 +49,70 @@ require 'tty-spinner'
         puts ""
         puts ""
     end
-
-    welcome
- 
+    welcome 
   
+    # ////// Menu list /////
 
-      def ready_to_play
-        puts "Ready to play? (Y/N)".colorize(:green)
-        play = gets.chomp.to_s  
-          if play == 'y' || play == 'Y' || play == 'yes'
-            puts ""
-            puts "please proceed!"
-          elsif play == 'n' || play == 'N' || play == 'no'
-            puts ""
-            puts "Okay, see you next time!"
-            exit  
-          else
-            puts "Please enter y or n:"
-            ready_to_play
-          end
-      end   
+    module Menu 
+      def self.menu_list 
+      prompt = TTY::Prompt.new
+      choices = [
+          {name: 'Play Game', value: 1},
+          {name: 'Instructions', value: 2},
+          {name: 'Scoreboard', value: 3},
+          {name: 'Exit', value: 4}
+        ]
+      
+      user_input = prompt.select("Select an action?", choices)
 
-      ready_to_play
-
+      case user_input
+      when 1
+        # Functionality for Choice 1 goes here
+        puts "Starting your game..".green
+        
+      when 2
+        # Functionality for Choice 2 goes here
+        
+        puts "Loading your instructions...".green
+        GameInstructions.steps
+      when 3
+        # Functionality for Choice 3 goes here
+        puts "Loading the scoreboard..".green
+      when 4
+        # Functionality for Choice 3 goes here
+        puts "Exiting application...".green
+      end
+    end 
+    end 
 
     # ////// games instructions /////
 
+    module GameInstructions
+      def self.steps
+          puts "              How to play:       ".yellow
+          puts ""
+          puts "Array meter will generate a dollar value.".yellow
+          puts ""
+          puts "Input a letter to guess from a world puzzle".yellow
+          puts ""
+          puts "Correct guess will earn a dollar value".yellow
+          puts ""
+          puts "Incorrect guess will go back to the array meter".yellow
+          puts ""
+          puts "Repeat until word puzzle is solved".yellow
+      end
+    end
 
-        def instructions
-            puts "                   How to play:       ".yellow
-            puts ""
-            puts "Spin the win and name the letters to guess the word puzzle".yellow
-            puts ""
-            puts "Each correct guess will reveal those letters and earn a dollar value from the wheel".yellow
-            puts ""
-            puts "Guess incorrectly and spin the wheel again".yellow
-            puts ""
-            puts "Repeat until word puzzle is solved".yellow
-        end
+    Menu.menu_list
+  
 
-        instructions
-        sleep 0.5
-        system 'clear'
-
-#  /// spinner ////
+      # ////// Spinner  /////
 
 
-      puts "Spinning the wheel"
-     
-
+      puts "Array meter generating random dollar value"
       begin
-        def attack_meter
-            attack_meter_array = [
+        def array_meter
+            array_meter = [
                 "|5|...........................".green,
                 "...|10|.......................".red,
                 "......|15|....................".yellow,
@@ -117,23 +129,29 @@ require 'tty-spinner'
     
             i = 1
             while i < 2
-                attack_meter_array.each do | meter | print meter + "\r"
+                array_meter.each do | meter | print meter + "\r"
                   sleep 0.25
                 end
                 i += 1
             end
           end 
 
-          attack_meter
+          array_meter
     
             spinner = TTY::Spinner.new("[:spinner] Loading ..........................".cyan, format: :pulse_2)
             spinner.auto_spin 
             sleep(2) 
             spinner.stop 
         end
+         
+  
+
+        # ////// Array meter /////
 
 
         points = ["$5", "$10", "$15", "$20", "$25", "$30", "$35", "$40", "$45", "$50", "$55", "$100"]
         puts points.sample.to_s.green
 
-        
+    
+
+        # ////// word generator /////

@@ -1,13 +1,18 @@
+#This file holds all the methods related to the user flow through the app.
+
 
 require 'colorize'
 require 'tty-prompt'
 require 'tty-spinner'
 
 
+require_relative './word_generator.rb'
+
 module MainLayout
     def self.start
         puts ""
         puts ""
+        
         puts ""
         puts ""
         puts "                         Welcome to                       "
@@ -34,30 +39,44 @@ module MainLayout
         puts ""
         puts ""
       end
+
+                #  //// Clear Terminal ////
+
+                    def self.clear
+                        print "\e[2J\e[f"
+                    end
+    
       
                 #  //// Menu list ////
 
                 def self.menu_list 
                     prompt = TTY::Prompt.new
                     choices = [
-                        {name: 'Play Game', value: 1},
-                        {name: 'Instructions', value: 2},
-                        {name: 'Scoreboard', value: 3},
-                        {name: 'Exit', value: 4}
+                        {name: 'About', value: 1},
+                        {name: 'Play Game', value: 2},
+                        {name: 'Instructions', value: 3},
+                        {name: 'Scoreboard', value: 4},
+                        {name: 'Exit', value: 5}
                     ]
                     
                     user_input = prompt.select("Select an action?", choices)
 
                     case user_input
                     when 1
-                    puts "Starting your game..".green
-                    MainLayout.array_display    
+                    puts "About game here"
                     when 2
-                    puts "Loading your instructions...".green
-                    MainLayout.steps
+                    puts "Starting your game..".green
+                    MainLayout.clear
+                    MainLayout.array_display 
                     when 3
-                    puts "Loading the scoreboard..".green
+                    puts ""
+                    MainLayout.clear
+                    puts "Loading your instructions...".green
+                    sleep(0.5)
+                    MainLayout.steps
                     when 4
+                    puts "Loading the scoreboard..".green
+                    when 5
                     puts "Exiting application...".green
                     end
                 end
@@ -65,37 +84,39 @@ module MainLayout
                 # //// Instructions ////
 
                 def self.steps
+                    puts ""
+                    puts ""
                     puts "              How to play:       ".yellow
                     puts ""
-                    puts "Array meter will generate a dollar value.".yellow
+                    puts "Array meter will randomly generate the prize you will be playing for".yellow
                     puts ""
-                    puts "Input a letter to guess from a world puzzle".yellow
+                    puts "Input a letter to guess from a word puzzle".yellow
                     puts ""
-                    puts "Correct guess will earn a dollar value".yellow
-                    puts ""
-                    puts "Incorrect guess will go back to the array meter".yellow
+                    puts "You will have 7 guesses until the game is over".yellow
                     puts ""
                     puts "Repeat until word puzzle is solved".yellow
                 end
 
              
-                # ///// Array meter display
+                # ///// Array meter display ////
                 
                 def self.array_display   
-                    puts "Array meter generating random dollar value"
+                    puts "You are playing for : "
+                    puts ""
+                    puts ""
                     array_meter = [
-                        "|5|...........................".green,
-                        "...|10|.......................".red,
-                        "......|15|....................".yellow,
-                        ".........|20|.................".blue,
-                        "............|25|.......".white,
-                        "...............|30|...........".light_blue,
-                        "..................|35|........".green,
-                        "...............|40|...........".red,
-                        "............|$45|..............".yellow,
-                        ".........|50|.............".blue,
-                        "......|55|....................".white,
-                        "...|100|.......................".green
+                        "|$5|.............................".green,
+                        "...|$10|.........................".red,
+                        "......|$70|......................".yellow,
+                        ".........|$60|...................".blue,
+                        "............|$50|................".white,
+                        "...............|$30|.............".light_blue,
+                        "..................|$20|..........".green,
+                        "...............|$40|.............".red,
+                        "............|$80|...............".yellow,
+                        ".........|$90|...................".blue,
+                        "......|$100|......................".white,
+                        "...|$200|........................".green
                     ]
             
                         i = 1
@@ -107,19 +128,36 @@ module MainLayout
                     end
 
 
-                    spinner = TTY::Spinner.new("[:spinner] Loading ..........................".cyan, format: :pulse_2)
+                 # ///// Loading bar ////
+
+                    spinner = TTY::Spinner.new("[:spinner] Loading.........................".cyan, format: :pulse_2)
                     spinner.auto_spin 
                     sleep(2) 
                     spinner.stop 
               
+                # ///// Array dollar value generator ////
 
-                    points = ["$5", "$10", "$15", "$20", "$25", "$30", "$35", "$40", "$45", "$50", "$55", "$100"]
+                    points = ["$5", "$10", "$20", "$30", "$40", "$50", "$60", "$70", "$80", "$90", "$100", "$200"]
+                    puts ""
+                    puts ""
                     puts points.sample.to_s.green
                 end 
+   
+                MainLayout.clear  
+          
+              # ///// Game /////
+              
+     
 
 
+
+
+
+           
             MainLayout.start
             MainLayout.menu_list
+           
+
     end
 
 

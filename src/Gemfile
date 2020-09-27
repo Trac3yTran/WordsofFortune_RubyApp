@@ -9,3 +9,4 @@ gem "colorize", "~> 0.8.1"
 gem "tty-prompt"
 
 gem 'tty-spinner'
+gem "rspec", "~> 3.9"

@@ -1,12 +1,9 @@
-#This file holds all the methods related to the user flow through the app.
 
 
 require 'colorize'
 require 'tty-prompt'
 require 'tty-spinner'
 
-
-require_relative './word_generator.rb'
 
 module MainLayout
     def self.start
@@ -63,7 +60,12 @@ module MainLayout
 
                     case user_input
                     when 1
-                    puts "About game here"
+                    puts ""
+                    puts "Words of Fortune is a fun educational word-guessing game to be played in a command-line interface." 
+                    puts "The purpose of Words of Fortune is to provide a fun way of learning vocabulary and testing your general knowledge."
+                    puts ""
+                    sleep(0.5)
+                    MainLayout.menu_list
                     when 2
                     puts "Starting your game..".green
                     MainLayout.clear
@@ -83,21 +85,22 @@ module MainLayout
 
                 # //// Instructions ////
 
-                def self.steps
-                    puts ""
-                    puts ""
-                    puts "              How to play:       ".yellow
-                    puts ""
-                    puts "Array meter will randomly generate the prize you will be playing for".yellow
-                    puts ""
-                    puts "Input a letter to guess from a word puzzle".yellow
-                    puts ""
-                    puts "You will have 7 guesses until the game is over".yellow
-                    puts ""
-                    puts "Repeat until word puzzle is solved".yellow
-                end
+                # def self.steps
+                #     puts ""
+                #     puts ""
+                #     puts "              How to play:       ".yellow
+                #     puts ""
+                #     puts "Array meter will randomly generate the prize you will be playing for".yellow
+                #     puts ""
+                #     puts "Input a letter to guess from a word puzzle".yellow
+                #     puts ""
+                #     puts "You will have 7 guesses until the game is over".yellow
+                #     puts ""
+                #     puts "Repeat until word puzzle is solved".yellow
+                # end
 
-             
+    
+
                 # ///// Array meter display ////
                 
                 def self.array_display   
@@ -136,22 +139,16 @@ module MainLayout
                     spinner.stop 
               
                 # ///// Array dollar value generator ////
-
+                
+             
                     points = ["$5", "$10", "$20", "$30", "$40", "$50", "$60", "$70", "$80", "$90", "$100", "$200"]
                     puts ""
                     puts ""
                     puts points.sample.to_s.green
-                end 
-   
+                    end
+
                 MainLayout.clear  
           
-              # ///// Game /////
-              
-     
-
-
-
-
 
            
             MainLayout.start

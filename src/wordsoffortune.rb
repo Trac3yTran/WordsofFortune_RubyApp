@@ -7,7 +7,6 @@ require 'tty-spinner'
 
 require_relative './layout.rb'
 require_relative './menu_list.rb'
-# require_relative './puzzle.rb'
 
 
 
@@ -16,6 +15,6 @@ require_relative './menu_list.rb'
 
 Layout.title
 Menu.menu_list
-# Puzzle.begin
+
 #Deployment of game
 

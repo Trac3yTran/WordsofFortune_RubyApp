@@ -11,21 +11,23 @@ require 'colorize'
                 @word_teaser += "_ "
               end
       end
-
-          def begin
-            # ask user for a letter
-            puts ""
-            puts "New game started... your word is #{ @word.first.size } characters long".yellow
-            puts ""
-            puts ""
-            puts "Clue: #{ @word.last }"
-            puts ""
-            puts ""
-            print_teaser
-            puts ""
-            make_guess
-          end
   
+             
+        def begin
+          # ask user for a letter
+          puts ""
+          puts "New game started... your word is #{ @word.first.size } characters long".yellow
+          puts ""
+          puts ""
+          puts "Clue: #{ @word.last }"
+          puts ""
+          puts ""
+          print_teaser
+          puts ""
+          make_guess
+        end
+
+
               def words
                 [
                   ["jogging", "Is a form of trotting or running at a slow or leisurely space"],

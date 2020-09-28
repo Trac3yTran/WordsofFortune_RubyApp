@@ -10,3 +10,5 @@ gem "tty-prompt"
 
 gem 'tty-spinner'
 gem "rspec", "~> 3.9"
+
+gem "tty-table", "~> 0.12.0"

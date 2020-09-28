@@ -23,7 +23,7 @@ module Menu
         puts "Words of Fortune is a fun educational word-guessing game to be played in a command-line interface." 
         puts "The purpose of Words of Fortune is to provide a fun way of learning vocabulary and testing your general knowledge."
         puts ""
-        sleep(0.5)
+        sleep(0.1)
         Menu.menu_list
         when 2
         puts "Starting your game..".green
@@ -35,7 +35,7 @@ module Menu
         puts ""
         Layout.clear
         puts "Loading your instructions...".green
-        sleep(0.5)
+        sleep(0.1)
         Instructions.steps
         sleep(0.5)
         puts ""
@@ -44,7 +44,7 @@ module Menu
         puts "Loading the scoreboard..".green
         puts ""
         when 5
-        puts "Exiting application...".greens
+        puts "Exiting application...".green
         puts ""
         end
     end

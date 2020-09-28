@@ -37,7 +37,7 @@ module Generator
         i = 1
         while i < 2
             array_meter.each do | meter | print meter + "\r"
-                sleep 0.5
+                sleep 0.25
             end
         i += 1
         end
@@ -67,11 +67,10 @@ module Generator
     puts ""
     puts ""
     puts ""
-    puts "" 
-    puts points.sample.to_s.green
+    puts "For this round you will be playing for #{points.sample.to_s.green}. Goodluck!"
     puts ""
     puts ""
     puts ""
-    puts ""
-    end
+    sleep(0.5)
+    end 
 end

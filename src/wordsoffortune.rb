@@ -8,13 +8,11 @@ require 'tty-spinner'
 require_relative './layout.rb'
 require_relative './menu_list.rb'
 
-
-
 # Intialising the title page and menu options
 # user select between about, play game, scoreboard ane exit.
 
 Layout.title
 Menu.menu_list
 
-#Deployment of game
+#Deployment of game accessing via the menu list
 

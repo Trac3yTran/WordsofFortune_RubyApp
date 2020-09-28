@@ -38,7 +38,9 @@ require 'colorize'
               #  User enter a letter and make a guess
               def make_guess
                 if @lives > 0
+                
                   puts "Enter a letter"
+                
                   guess = gets.chomp
                   # If letter is not part of the word then remove from letters array
                  #include? will check the contents of the string to see if the string passing is found within that string

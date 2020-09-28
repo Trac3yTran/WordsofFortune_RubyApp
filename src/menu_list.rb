@@ -1,7 +1,7 @@
 require 'colorize'
-
 require_relative './instructions.rb'
 require_relative './array_meter.rb'
+require_relative './puzzle.rb'
 
 
 module Menu
@@ -14,7 +14,7 @@ module Menu
             {name: 'Scoreboard', value: 4},
             {name: 'Exit', value: 5}
         ]
-        
+
         user_input = prompt.select("Select an action?", choices)
 
         case user_input
@@ -28,7 +28,9 @@ module Menu
         when 2
         puts "Starting your game..".green
         Layout.clear
-        Generator.array_display 
+        Generator.array_display
+        game = Puzzle.new
+        game.begin
         when 3
         puts ""
         Layout.clear
@@ -47,3 +49,4 @@ module Menu
         end
     end
 end
+

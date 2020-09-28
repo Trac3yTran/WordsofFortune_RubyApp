@@ -10,11 +10,11 @@ require 'colorize'
               @word.first.size.times do
                 @word_teaser += "_ "
               end
-      end
+            end
   
-             
+      
+            # ask user for a letter
         def begin
-          # ask user for a letter
           puts ""
           puts "New game started... your word is #{ @word.first.size } characters long".yellow
           puts ""
@@ -92,7 +92,3 @@ require 'colorize'
   
   end
  
-  game = Puzzle.new
-  game.begin
-  
-  

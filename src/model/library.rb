@@ -1,4 +1,4 @@
-# module Library
+# # module Library
 #     WORDS = [
 #         ["economy", "A specific type of economic system"],
 #         ["payment", "The action or process of paying someone or something or of being paid"],
@@ -7,11 +7,11 @@
 #         ["galaxy", "Is a huge collection of gas, dust, and billions of stars and their solar systems"],
 #     ]
 
-#     def self.good_guess?(guess)
-#         WORDS.first.include? guess
-#     end
+# #     def self.good_guess?(guess)
+# #         WORDS.first.include? guess
+# #     end
 
-#     def self.sample
-#         WORDS.sample
-#     end
-# end
+# #     def self.sample
+# #         WORDS.sample
+# #     end
+# # end

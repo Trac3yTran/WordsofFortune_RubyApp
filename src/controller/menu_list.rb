@@ -21,7 +21,7 @@ module Menu
         case user_input
         when 1
         puts ""
-        puts "Words of Fortune is a fun educational word-guessing game to be played in a command-line interface." 
+        puts "Words of Fortune is a fun word-guessing game to be played in a command-line interface." 
         puts "The purpose of Words of Fortune is to provide a fun way of learning vocabulary and testing your general knowledge."
         puts ""
         sleep(0.1)
@@ -43,7 +43,6 @@ module Menu
         Menu.menu_list
         when 4
         puts "Loading the scoreboard..".green
-        Menu.menu_list
         puts ""
         when 5
         puts "Exiting application...".green

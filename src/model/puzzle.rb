@@ -35,8 +35,8 @@ require 'colorize'
       # library
       def words
         [
-          ["economy", "A specific type of economic system"],
-          ["payment", "The action or process of paying someone or something or of being paid"],
+          ["sister", "A female sibling"],
+          ["software", "Set of programs, which is designed to perform a well-defined function"],
           ["continent", "There are 7 of these large landmasses in the world"],
           ["morning", "The first or early part of the day, lasting from midnight to noon or from sunrise to noon"],
           ["galaxy", "Is a huge collection of gas, dust, and billions of stars and their solar systems"],
@@ -64,47 +64,45 @@ require 'colorize'
 
 
           # Guess a letter
-    def make_guess
-            if @lives > 0
-              puts ""
-              puts "Enter a letter"
-              guess = gets.chomp
-              good_guess = @word.first.include? guess
-
-             # exit the game
-
-            if guess == "exit"
-              puts "Thank you for playing!"
-            elsif good_guess
-              puts ""
-              puts "You are correct!".green
-              puts ""
-              print_teaser guess
-            
-              if @word.first == @word_teaser.split.join
-                puts ""
-                puts "Congratulations... you have won this round!".green
-                puts ""
-              else
-                make_guess
-              end
-
-                else
-                  @lives -= 1
+            def make_guess
+                if @lives > 0
                   puts ""
-                  puts "Sorry... you have #{ @lives } lives left. Try again!".red 
+                  puts "Enter a letter"
+                  guess = gets.chomp
+                  good_guess = @word.first.include? guess
+
+                # exit the game
+
+                if guess == "exit"
+                  puts "Thank you for playing!"
+                elsif good_guess
                   puts ""
-                  make_guess
-                end
+                  puts "You are correct!".green
+                  puts ""
+                  print_teaser guess
+                
+                  if @word.first == @word_teaser.split.join
+                    puts ""
+                    puts "Congratulations... you have won this round!".green
+                    puts ""
+                  else
+                    make_guess
+                  end
 
-              else
-                puts ""
-                puts "Game over... better luck next time!".red
-                puts ""
-              end
+                    else
+                      @lives -= 1
+                      puts ""
+                      puts "Sorry... you have #{ @lives } lives left. Try again!".red 
+                      puts ""
+                      make_guess
+                    end
 
-  end
-
+                  else
+                    puts ""
+                    puts "Game over... better luck next time!".red
+                    puts ""
+                  end
+        end
 
 end
 

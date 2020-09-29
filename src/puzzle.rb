@@ -8,7 +8,7 @@ require 'colorize'
               @word = words.sample
               # limited lives more than 7 times the game will end 
               @lives = 7
-              # show how many characters there in a puzzle. Space them out. As the user gets the letter correct it will fill them out with the approapriate letter
+              # show how many characters there in a puzzle. As the user gets the letter correct it will fill them out with the approapriate letter
               @word_teaser = ""
               # using the @word.first to loop over multiple times. The number of time it gets loop over depending on the length of the word (.size and .times to run the script and return a string with "_"
               @word.first.size.times do

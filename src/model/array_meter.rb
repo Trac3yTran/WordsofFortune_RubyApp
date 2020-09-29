@@ -76,7 +76,7 @@ require 'tty-spinner'
             spinner.auto_spin 
             sleep(2) 
             spinner.stop 
-            Layout.clear
+            View.clear
 
     # ///// Array dollar value generator ////
 

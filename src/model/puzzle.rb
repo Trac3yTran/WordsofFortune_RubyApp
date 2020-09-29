@@ -4,9 +4,9 @@ require_relative 'library'
 
       class Puzzle
            #create instance variables to be access different methods within this class 
+           
             def initialize
 
-              # @word = words.sample
               @word = Library.sample
               # limited lives more than 7 times the game will end 
               @lives = 7
@@ -74,34 +74,25 @@ require_relative 'library'
             end
     
         
-                #Putting the word and clue in array so it will generate a different one each time. Each word will be accompany by a clue. In each array there is a word the user is trying to guess and the clue will be return to them
-                # def words
-                #   [
-                #     ["economy", "A specific type of economic system"],
-                #     ["payment", "The action or process of paying someone or something or of being paid"],
-                #     ["continent", "There are 7 of these large landmasses in the world"],
-                #     ["morning", "The first or early part of the day, lasting from midnight to noon or from sunrise to noon"],
-                #     ["galaxy", "Is a huge collection of gas, dust, and billions of stars and their solar systems"],
-                #   ]
-                # end
   
-              def print_teaser last_guess = nil
-                update_teaser(last_guess) unless last_guess.nil?
-                puts @word_teaser
-              end
+                  def print_teaser last_guess = nil
+                    update_teaser(last_guess) unless last_guess.nil?
+                    puts @word_teaser
+                  end
   
 
-              def update_teaser last_guess
-                new_teaser = @word_teaser.splitl
-            
-                new_teaser.each_with_index do |letter, index|
-                  # replace blank values with guessed letter if matches letter in word
-                  if letter == '_' && @word.first[index] == last_guess
-                    new_teaser[index] = last_guess
+                  def update_teaser last_guess
+                    new_teaser = @word_teaser.splitl
+                
+                    new_teaser.each_with_index do |letter, index|
+                      # replace blank values with guessed letter if matches letter in word
+                      if letter == '_' && @word.first[index] == last_guess
+                        new_teaser[index] = last_guess
+                      end
                   end
-              end
   
               @word_teaser = new_teaser.join(' ')
+
             end
 
   

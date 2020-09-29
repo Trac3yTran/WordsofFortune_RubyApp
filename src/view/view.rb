@@ -3,7 +3,7 @@
 require 'colorize'
 
 
-module Layout
+module View
     def self.title  
         puts ""
         puts ""

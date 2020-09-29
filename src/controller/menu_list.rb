@@ -1,7 +1,7 @@
 require 'colorize'
-require_relative './instructions.rb'
-require_relative './array_meter.rb'
-require_relative './puzzle.rb'
+require_relative '../model/instructions.rb'
+require_relative '../model/array_meter.rb'
+require_relative '../model/puzzle.rb'
 
 
 module Menu
@@ -27,13 +27,13 @@ module Menu
         Menu.menu_list
         when 2
         puts "Starting your game..".green
-        Layout.clear
+        View.clear
         Generator.array_display
         game = Puzzle.new
         game.begin
         when 3
         puts ""
-        Layout.clear
+        View.clear
         puts "Loading your instructions...".green
         sleep(0.1)
         Instructions.steps

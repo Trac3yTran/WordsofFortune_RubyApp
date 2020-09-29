@@ -5,7 +5,7 @@ module Instructions
         puts ""
         puts "              How to play:       ".yellow
         puts ""
-        puts "Array meter will randomly generate the prize you will be playing for".yellow
+        puts "Spin the win that will randomly generate the prize you will be playing for".yellow
         puts ""
         puts "Input a letter to guess from a word puzzle".yellow
         puts ""

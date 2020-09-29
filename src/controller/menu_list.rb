@@ -1,4 +1,5 @@
 require 'colorize'
+
 require_relative '../model/instructions.rb'
 require_relative '../model/array_meter.rb'
 require_relative '../model/puzzle.rb'
@@ -42,6 +43,7 @@ module Menu
         Menu.menu_list
         when 4
         puts "Loading the scoreboard..".green
+        Menu.menu_list
         puts ""
         when 5
         puts "Exiting application...".green
@@ -49,4 +51,3 @@ module Menu
         end
     end
 end
-

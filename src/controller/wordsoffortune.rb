@@ -1,3 +1,4 @@
+
 #This file holds all the methods related to the user flow through the app.
 
 #Depencies
@@ -15,4 +16,3 @@ View.title
 Menu.menu_list
 
 #Deployment of game accessing via the menu list
-

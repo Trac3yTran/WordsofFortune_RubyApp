@@ -61,7 +61,7 @@ require 'tty-spinner'
 
     # ///// Loading bar ////
 
-           
+    
             puts ""
             puts ""
             puts ""

@@ -2,6 +2,7 @@ require 'colorize'
 
 require_relative '../controller/gamemenu.rb'
 
+
     class Puzzle
         def initialize
           @word = words.sample

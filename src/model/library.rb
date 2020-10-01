@@ -7,11 +7,12 @@
 #         ["galaxy", "Is a huge collection of gas, dust, and billions of stars and their solar systems"],
 #     ]
 
-# #     def self.good_guess?(guess)
-# #         WORDS.first.include? guess
-# #     end
+#     def self.good_guess?(guess)
+#         WORDS.first.include? guess
+#     end
 
-# #     def self.sample
-# #         WORDS.sample
-# #     end
-# # end
+#     def self.sample
+#         WORDS.sample
+#     endexit
+
+# end

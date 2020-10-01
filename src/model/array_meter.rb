@@ -1,6 +1,7 @@
 require 'colorize'
 require 'tty-prompt'
 require 'tty-spinner'
+require 'ruby2d'
 
 
 # ///// Array meter display ////
@@ -59,6 +60,11 @@ require 'tty-spinner'
 
        View.clear
 
+
+    # def spinning_wheel
+    #     drum = Music.new('sound/Drum_Run/mp3')
+    #     drum.play
+    # end
     # ///// Loading bar ////
 
     

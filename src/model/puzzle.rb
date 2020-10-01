@@ -4,7 +4,9 @@ require_relative '../controller/gamemenu.rb'
 
 
     class Puzzle
-        def initialize
+      attr_accessor :word, :words
+      def initialize
+          @words = words
           @word = words.sample
           @lives = 7
           @word_teaser = ""
@@ -47,22 +49,22 @@ require_relative '../controller/gamemenu.rb'
 
 
       # teaser
-        def print_teaser last_guess = nil
+      def print_teaser last_guess = nil
           update_teaser(last_guess) unless last_guess.nil?
           puts @word_teaser
-        end
+      end
 
-        def update_teaser last_guess
+      def update_teaser last_guess
           new_teaser = @word_teaser.split
           new_teaser.each_with_index do |letter, index|
             # replace blank values with guessed letter if matches letter in word
             if letter == '_' && @word.first[index] == last_guess
               new_teaser[index] = last_guess
             end
-        end
+      end
 
-          @word_teaser = new_teaser.join(' ')
-          end
+        @word_teaser = new_teaser.join(' ')
+      end
 
 
           # Guess a letter

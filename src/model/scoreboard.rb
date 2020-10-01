@@ -11,6 +11,3 @@ class Scoreboard
         end 
 
 end
-
-leaderboard = Scoreboard.new 
-puts Scoreboard.leaderboard 

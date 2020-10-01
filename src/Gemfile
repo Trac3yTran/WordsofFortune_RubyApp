@@ -13,3 +13,7 @@ gem "tty-prompt", "~> 0.22.0"
 gem 'tty-spinner'
 
 gem 'terminal-table'
+
+gem "ruby2d", "~> 0.9.4"
+
+gem "pastel"

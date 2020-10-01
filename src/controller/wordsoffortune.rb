@@ -8,6 +8,8 @@ require 'tty-spinner'
 
 require_relative '../view/view.rb'
 require_relative './menu_list.rb'
+song = Music.new('../sound/Drum_Run.mp3')
+song.play
 
 # Intialising the title page and menu options
 # user select between about, play game, scoreboard ane exit.

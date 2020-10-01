@@ -4,6 +4,7 @@ GEM
     colorized (0.0.0)
     pastel (0.8.0)
       tty-color (~> 0.5)
+    ruby2d (0.9.4)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     tty-color (0.5.2)
@@ -26,6 +27,7 @@ PLATFORMS
 
 DEPENDENCIES
   colorized (~> 0.0.0)
+  ruby2d (~> 0.9.4)
   terminal-table
   tty-prompt (~> 0.22.0)
   tty-spinner

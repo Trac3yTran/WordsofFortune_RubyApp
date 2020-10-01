@@ -1,5 +1,6 @@
 require 'colorize'
 
+require_relative '../controller/gamemenu.rb'
 
     class Puzzle
         def initialize
@@ -84,6 +85,8 @@ require 'colorize'
                   if @word.first == @word_teaser.split.join
                     puts ""
                     puts "Congratulations... you have won this round!".green
+                    puts ""
+                    GameMenu.list
                     puts ""
                   else
                     make_guess

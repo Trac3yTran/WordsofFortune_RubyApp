@@ -35,7 +35,7 @@ require_relative '../controller/gamemenu.rb'
    
 
       # library
-      def words
+      def self.words
         [
           ["sister", "A female sibling"],
           ["software", "Set of programs, which is designed to perform a well-defined function"],

@@ -4,7 +4,7 @@ require_relative '../controller/gamemenu.rb'
 
 
     class Puzzle
-      attr_accessor :word, :words
+
       def initialize
           @words = words
           @word = words.sample

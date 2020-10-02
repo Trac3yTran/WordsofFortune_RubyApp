@@ -18,7 +18,7 @@ it 'should contain the random word arrays and clue' do
 end
 end
 
-# Testing to see if it will include a string from the words method
+# Testing to see if it will return a 's' from the word "sister" from the array
 
 RSpec.describe Library do
     it 'include a string from the random word' do

@@ -24,7 +24,7 @@
 
 Purpose: 
 
-Words of Fortune is a fun educational word-guessing game to be played in a command-line interface. The purpose of Words of Fortune is to provide a fun way of learning vocabulary and testing your general knowledge. Player spin the wheel, solve puzzles and train your brain as you go. Compete in word puzzle tournaments get dollar value determined by spinning a giant wheel. Each round has a category and blank word puzzle with each blank representing a letter in the answer. Player needs to spin the win to start to determine dollar value and have five seconds to guess a consonant. Pick a correct letter that will earn a dollar value with right reveal multiplied by the number of times that the letter appears in the puzzle. If the player gets the letter right, it can spin the wheel again and continue the process. Fail to pick the correct letter that is not in the world puzzle or letter that has been called before it will move to the next player until the world puzzle is solved. 
+Words of Fortune is a fun educational word-guessing game to be played in a command-line interface. The goal of Words of Fortune is to provide a fun way of learning vocabulary and testing your general knowledge. Player spin the wheel, solve puzzles and train your brain as you go. 
 
 Problem: 
 
@@ -33,9 +33,11 @@ The current problem is more than 20 per cent of Australian adults have very low 
 Target Audience:
 
 Words of Fortune is an excellent game for everyone. Created for entertainment purpose, but it can be beneficial, especially in educational space, to boost vocabulary. The importance to spell the words correctly to be able to complete the task in a given time. This is done by allowing the user to guess the secret one letter at a time, which can also help remember the spelling of new words.
+
 Target Audience Usage:
 
-Words of Fortune will be launched from the command line using the files listed in the installation section of this Readme.md document. 
+Words of Fortune will be launched from the command line using the files listed in the installation section of this README.md document. 
+
 
 #
 
@@ -43,30 +45,26 @@ Words of Fortune will be launched from the command line using the files listed i
 
 Play classic world game inspired by the TV show. 
 
-- Each round of game contains a category and blank word puzzle with each blank representing a letter in the answer. The user spins the wheel and guess a letter until they can solve the word puzzle and winning prizes along the way. 
+- Each round of game contains a category and blank word puzzle with each blank representing a letter in the answer. The player will be able to see the result of each letter input they have entered into the CLI. If they enter an incorrect guess, it will deduct from the seven lives that were set in the game, and it will display "Sorry... you have seven lives left. Try again!". If they correctly guess the letter if will also display a message, You are correct! And if they successfully finish the game, it will indicate "Congratulations... you have won this round!" There is an option to start the game again or exit. User can also exit the game from anywhere in the application and during the game. 
 
-Timer and Scoreboard 
+Spinning wheel
 
--   A five seconds timer start after the player has spin the wheel needs to guess a letter within the five seconds. If they fail to guess the correct consonant or letter it will go to the next player. Each player will have a scoreboard that shows their score if they have correctly guess the letter of solving the puzzle.
+-   The spinning wheel automatically start each game to generate a random prize money from the array of prizes ranging from $5, $10, $20, $30, $40, $50, $60, $70, $80, $90, $100, and $200. Once it returns the prize money, it will display the amount the player will be playing for that round. If the player gets all the words correctly within the seven turns, they will be able to get the prize money and added to the leaderboard. 
+ 
+Music
 
-Spin the wheel and win prizes.
-
- -  Player spins the wheel to determine the dollar value and guess a consonant/letter. Calling the correct letters will earn the amount, and the right reveal, multiplied by the number of times that the letter appears in the puzzle. They can also buy a vowel for $250 to attempt to solve the puzzle and can continue to buy the vowel if they have the money to do so. Prizes range from $500 - $2500 and others that need to be avoided like Lose a Turn and bankrupt, which automatically go to the next user.
-
+- Music has been to the application as background music. This is used to set the tone for the whole game and establish the style of the story being told. Music also helps the player to understand the functionality and features of the game and to engage more with the functionality of the game. 
 
 #
 
 ## User interaction and experience
-
-
 
 #
 
 
 ## Control Flow Development
 
-- Control Flow Development
-
+![Controlflow](./doc/screenshots/Diagram.png)
 
 #
 
@@ -77,9 +75,16 @@ I created a Trello board once my idea has been approved to assist with breaking 
 ### [Trello Board](https://trello.com/b/HXjd9mhc/wordsoffortuneterminal-app)
 
 
-![Trello](Trello.png)
+![Trello](./doc/screenshots/Trello.png)
 
 #
+
+## Testing 
+
+Two tests were completed successfully to test for the correct outputs of words and clues and the other test if the strings were returning the correct letter from the word 'sister'.
+
+![Testing](./doc/screenshots/testing.png)
+
 
 ## Help documentation
 

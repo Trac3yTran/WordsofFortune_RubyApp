@@ -60,12 +60,28 @@ Music
 
 ## User interaction and experience
 
-### How the user will find out how to interact with / use each feature
+The game starts with the menu screen being displayed.
 
-### How the user will interact with / use each feature
 
-### how errors will be handled by the application and displayed to the user
+![menu](./doc/screenshots/menu.png)
 
+The user can select any options from the menu, and it will take them to the appropriate page, which also displays the menu option again. 
+
+![about](./doc/screenshots/about.png)
+
+When the user select play game. As spinning wheel with generate a random prize menu and will let them know how much they are playing for each round. 
+
+![wheel](./doc/screenshots/wheel.png)
+
+When the user selects play game, it will go to the spinning wheel that will automatically generate a random prize amount and will let them know how much they are playing for each round. 
+
+![amount](./doc/screenshots/amount.png)
+
+A player will then be prompted to enter a word to be guessed. This entry will be checked to ensure that it does not contain any special characters or numbers. If the entry does contain any characters that are not allowed the user will be prompted to re-enter the word until it meets the requirements. The player also have an option to exit the game anytime during the game by entering 'exit'.
+
+![game](./doc/screenshots/game.png)
+
+#
 
 ## Control Flow Development
 

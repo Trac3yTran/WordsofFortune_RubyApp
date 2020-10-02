@@ -10,6 +10,7 @@
 - [Implementation Plan](#Implementation-Plan)  
 - [Testing](#Testing)
 - [Help Documentation](#help-documentation) 
+- [Acknowledgements](#Acknowledgements) 
 
 #
 
@@ -59,7 +60,11 @@ Music
 
 ## User interaction and experience
 
-#
+### How the user will find out how to interact with / use each feature
+
+### How the user will interact with / use each feature
+
+### how errors will be handled by the application and displayed to the user
 
 
 ## Control Flow Development
@@ -85,6 +90,54 @@ Two tests were completed successfully to test for the correct outputs of words a
 
 ![Testing](./doc/screenshots/testing.png)
 
-
+#
 ## Help documentation
+
+## Install the application
+
+- If you do not have Ruby on your computer, follow these instructions to [download and install](https://www.ruby-lang.org/en/documentation/installation/)
+
+- Clone the project files onto your computer from the source code here: https://github.com/Trac3yTran/WordsofFortune_RubyApp
+
+- On the terminal command line, navigate to the WordsofFortune directory you have just cloned.
+- If you do not have the 'bundler' gem installed on your computer, please enter the following code.
+ 
+```ruby
+$ install bundler
+```
+- In the terminal type in the below folders 
+
+```ruby
+cd src/controller
+```
+- To activate the game enter the below. Make sure your volume is turned on for more personalised experience. 
+
+
+```ruby
+ruby wordsoffortune.rb
+```
+
+## Dependencies 
+
+Words of fortune utilies the following gme that are  Mac dependent and will not function on other operating systems.
+
+The following Ruby Gems are required and are included in the Gemfile.
+
+- gem "colorized", "~> 0.0.0"
+
+- gem "tty-prompt", "~> 0.22.0"
+
+- gem 'tty-spinner'
+
+- gem 'terminal-table'
+
+- gem "ruby2d", "~> 0.9.4"
+
+#
+
+# Acknowledgements
+
+ASCII text was generated here
+
+### [fsymbols](https://fsymbols.com/generators/carty/)
 

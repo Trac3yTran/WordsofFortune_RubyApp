@@ -2,6 +2,8 @@
 require 'rspec'
 require_relative '../model/library.rb'
 
+# Testing the features from words method to see if the words and clue inside the array will return.
+
 RSpec.describe Library do
 it 'should contain the random word arrays and clue' do
     puzzle = Library.words
@@ -16,6 +18,7 @@ it 'should contain the random word arrays and clue' do
 end
 end
 
+# Testing to see if it will include a string from the words method
 
 RSpec.describe Library do
     it 'include a string from the random word' do

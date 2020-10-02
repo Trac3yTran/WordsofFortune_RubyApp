@@ -3,7 +3,7 @@ require 'rspec'
 require_relative '../model/library.rb'
 
 RSpec.describe Library do
-it 'should contain the random word arrays and meanings' do
+it 'should contain the random word arrays and clue' do
     puzzle = Library.words
     expect(puzzle).to eq [
         ["sister", "A female sibling"],
@@ -17,4 +17,11 @@ end
 end
 
 
-
+RSpec.describe Library do
+    it 'include a string from the random word' do
+      guess = Library.words
+      expect("sister").to include("s")
+    
+end
+end
+    

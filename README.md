@@ -102,7 +102,7 @@ I created a Trello board once my idea has been approved to assist with breaking 
 
 ## Testing 
 
-Two tests were completed successfully to test for the correct outputs of words and clues and the other test if the strings were returning the correct letter from the word 'sister'.
+Two tests were completed using Rspec successfully to test for the correct outputs of words and clues and the other test if the strings were returning the correct letter from the word 'sister'.
 
 ![Testing](./doc/screenshots/testing.png)
 
@@ -135,7 +135,7 @@ ruby wordsoffortune.rb
 
 ## Dependencies 
 
-Words of fortune utilies the following gme that are  Mac dependent and will not function on other operating systems.
+Words of fortune utilise the following gems that are  Mac dependent and will not function on other operating systems.
 
 The following Ruby Gems are required and are included in the Gemfile.
 
